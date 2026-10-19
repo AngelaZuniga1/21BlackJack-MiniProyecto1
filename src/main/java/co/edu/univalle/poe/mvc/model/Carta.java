@@ -1,13 +1,21 @@
 package co.edu.univalle.poe.mvc.model;
 
 public class Carta {
+
+    // Atributos
     private Valor valor;
     private Palo palo;
+
+    // Constructor
 
     public Carta(Valor valor, Palo palo) {
         this.valor = valor;
         this.palo = palo;
     }
+
+    // Métodos
+
+    //getters
 
     public Valor getValor() {
         return valor;
@@ -20,6 +28,8 @@ public class Carta {
     public int getPuntos() {
         return valor.getPuntos();
     }
+
+    //toString
 
     @Override
     public String toString() {
