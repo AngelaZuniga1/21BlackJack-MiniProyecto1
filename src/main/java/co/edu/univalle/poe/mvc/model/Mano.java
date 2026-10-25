@@ -10,9 +10,10 @@ public class Mano {
 
     public static final int OBJETIVO = 21;
     public static final int PUNTAJE_VEINTE_Y_MEDIO = 14;
+    public static final int BONO_AS = 10;
 
     // false = cualquier par de cartas que sume 14; true = solo figura + 4.
-    public static final boolean SOLO_FIGURA_Y_CUATRO = false;
+    public static final boolean SOLO_FIGURA_Y_CUATRO = true;
 
     // Atributos
 
@@ -44,8 +45,8 @@ public class Mano {
                 hayAs = true;
             }
         }
-        if (hayAs && suma + 10 <= OBJETIVO) {
-            suma += 10;
+        if (hayAs && suma + BONO_AS <= OBJETIVO) {
+            suma += BONO_AS;
         }
         return suma;
     }
