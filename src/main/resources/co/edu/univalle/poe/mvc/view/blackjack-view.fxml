@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <!-- Asigna tu clase controladora desde Scene Builder: Controller > Controller class -->
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #0b6b3a;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.univalle.poe.mvc.controller.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #0b6b3a;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.univalle.poe.mvc.controller.BlackjackController">
    <children>
       <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -30,7 +30,7 @@
                         <Label fx:id="lblPuntajeComputador" style="-fx-text-fill: #ffd54f; -fx-font-size: 16; -fx-font-weight: bold;" text="Puntaje: 0" />
                      </children>
                   </HBox>
-                  <!-- Aquí agregas ImageView por código con hbCartasComputador.getChildren().add(...) -->
+                  <!-- Aquí agregas ImageView -->
                   <HBox fx:id="hbCartasComputador" alignment="CENTER" minHeight="115.0" prefHeight="115.0" spacing="10.0" />
                </children>
             </VBox>
@@ -81,27 +81,27 @@
             <!-- BOTONES DE ACCIÓN -->
             <HBox alignment="CENTER" spacing="15.0">
                <children>
-                  <Button fx:id="btnIniciarRonda" mnemonicParsing="false" text="Iniciar ronda">
+                  <Button fx:id="btnIniciarRonda" mnemonicParsing="false" onAction="#onIniciarRonda" text="Iniciar ronda">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="btnPedirCarta" disable="true" mnemonicParsing="false" text="Pedir carta">
+                  <Button fx:id="btnPedirCarta" disable="true" mnemonicParsing="false" onAction="#onPedirCarta" text="Pedir carta">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="btnPlantarse" disable="true" mnemonicParsing="false" text="Plantarse">
+                  <Button fx:id="btnPlantarse" disable="true" mnemonicParsing="false" onAction="#onPlantarse" text="Plantarse">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="btnVerReglas" mnemonicParsing="false" text="Ver reglas">
+                  <Button fx:id="btnVerReglas" mnemonicParsing="false" onAction="#onVerReglas" text="Ver reglas">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="btnCerrarJuego" mnemonicParsing="false" text="Cerrar juego">
+                  <Button fx:id="btnCerrarJuego" mnemonicParsing="false" onAction="#onCerrarJuego" text="Cerrar juego">
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
