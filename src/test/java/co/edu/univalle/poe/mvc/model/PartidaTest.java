@@ -38,9 +38,16 @@ class PartidaTest {
     void testIniciarRonda() {
         String error = partida.iniciarRonda(100);
         assertNull(error);
-        assertEquals(900, partida.getSaldo());
-        assertEquals(100, partida.getApuestaVigente());
         assertEquals(2, partida.getManoJugador().getCantidadCartas());
-        assertTrue(partida.getManoComputador().estaVacia());
+        
+        if (partida.getManoJugador().esBlackjack()) {
+            assertEquals(0, partida.getApuestaVigente());
+            assertFalse(partida.esTurnoJugador());
+        } else {
+            assertEquals(900, partida.getSaldo());
+            assertEquals(100, partida.getApuestaVigente());
+            assertTrue(partida.getManoComputador().estaVacia());
+            assertTrue(partida.esTurnoJugador());
+        }
     }
 }
